@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../CSS/login/style.css">
+
+    <title>Tela de Login </title>
+  </head>
+  <div class="figura-logo">
+    <img src="../../img/Login/logo.png">
+  </div>
+  <body>
+    <form>
+    <div class="box-form"> 
+      <div class="form-content">
+        <h3 class="titulo">Olá Seja Bem Vindo!</h3>
+        <p class="sub-titulo">Estamos muito animados em ter você aqui!</p>
+          <div id="msgError"></div>
+
+            <div class="form-input">
+                <label id="labelEmail" for="email">e-mail ou número de telefone <span>*</span> </label>
+                <input type="text" placeholder="Digite seu email ou telefone" id="email" required>
+            </div>
+            
+
+            <div class="form-input">
+                <label id="labelSenha" for="senha">senha<span>*</span> </label>
+                <input type="password" placeholder="Senha" id="senha" required>
+            </div>
+            
+
+
+            <div class="forget-password-link">
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+            <button type="button" onclick="entrar()">Entrar</button>
+
+        </form>
+      </div>
+      
+      <div class="form-figura">
+            <img src="../../img/Login/figuralogin.png">
+      </div>
+
+      <script src="../../js/login/val.js"></script>
+
+    </div>
+  </form>
+  </body>
+</html>

@@ -322,14 +322,14 @@
       align-items: center;
       justify-content: center;
       padding: 30px;
-      margin: 60px;
+       margin: 60px; 
     }
   
     .ranking-title {
       text-align: left;
       margin-left: 185px;
   
-    }
+    } 
   
     .podium {
       display: flex;
@@ -374,72 +374,3 @@
       transition: scale 0.3s;
     }
   }
-
-  
-@media (max-width: 320px) {
-
-    .container .title {
-      width: 220px;
-      border-radius: 30px;
-      padding: 20px;
-      text-align: center;
-      font-size: 16px;
-      margin: 10px;
-      margin-top: 30px;
-    }
-  
-    .container .podium,
-    .main,
-    .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      margin: 0 auto;
-    }
-  
-    .ranking-title {
-      text-align: left;
-      margin-left: 100px;
-    }
-  
-    .podium {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 70%;
-      padding: 10px;
-    }
-  
-    main li {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 1px;
-      position: relative;
-      margin: 10px;
-    }
-  
-    main li img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      padding: 2px;
-      border: 1px solid #74F005;
-      transition: scale 0.3s;
-    }
-  
-    .ranking li {
-      align-items: left;
-      justify-content: space-evenly;
-      border-radius: 20px;
-      margin-right: 120px;
-      gap: 10px;
-      padding: 10px;
-    }
-  }
-  
