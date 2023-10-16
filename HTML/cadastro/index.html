@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../CSS/Cadastro/style.css">
+    <title>Tela de login com html e css</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="box-form">
+            <form>
+                <div class="form-content">
+                    <h3 class="titulo">Olá seja bem vindo!</h3>
+                    <p class="sub-titulo">Estamos muito animados em ter você aqui!</p>
+                    <div class="figura-logo">
+                        <img src="../../img/Login/logo2.png">
+                    </div>
+                    <p class="register-link">
+                        Já tem uma conta?
+                        <a href="#">Entre</a>
+                    </p>
+
+                    <div class="form-input">
+                        <label id="labelEmail" for="email">Email <span>*</span> </label>
+                        <input type="text" placeholder="Digite seu email" id="email" required>
+                        <small id="textEmail"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelNumero" for="numero">Número de telefone <span>*</span> </label>
+                        <input type="text" placeholder="Número de telefone" id="numero" required>
+                        <small id="textNumero"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelNome" for="nome">Nome de usuário <span>*</span> </label>
+                        <input type="text" placeholder="Nome de usuário " id="nome" required>
+                        <small id="textNome"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelData" for="data">Data de nascimento <span>*</span> </label>
+                        <input type="text" placeholder="__/__/____" id="data" required>
+                        <small id="textData"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelEndereco" for="endereco">Endereço <span>*</span> </label>
+                        <input type="text" placeholder="Endereço" id="endereco" required>
+                        <small id="textEndereco"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelCep" for="cep">Cep <span>*</span> </label>
+                        <input type="text" placeholder="Cep" id="cep" required>
+                        <small id="textCep"></small>
+                    </div>
+
+                    <div class="form-input">
+                        <label id="labelSenha" for="senha">senha <span>*</span> </label>
+                        <input type="password" placeholder="Senha" id="password" required>
+                        <small id="textPassword"></small>
+                    </div>
+                    <div class="forget-password-link">
+                        <a href="#">Esqueceu sua senha?</a>
+                        <button onclick="cadastrar()">Cadastrar</button>
+                        <div id='msgError'></div>
+                        <div id='msgSuccess'></div>
+                        <small id="textForm"></small>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="../../Cadastro/validacao.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>$('#numero').mask('(00) 0000-00000')</script>
+    <script>$('#data').mask('00/00/0000');</script>
+    <script>$('#cep').mask('00000-000')</script>
+</body>
+
+</html>
