@@ -10,8 +10,8 @@ inputIcon.forEach((item, i) => {
             'src',
             input[i].getAttribute('type') === 'password' ?
 
-                '../../img/Login/eye.svg'
-                : '../../img/Login/eye-off.svg'
+                '../img/Login/eye.svg'
+                : '../img/Login/eye-off.svg'
         );
 
         input[i].setAttribute(
