@@ -27,15 +27,14 @@ main{
 }
 
 .box-form {
-    max-width: 600px;
+    max-width: 650px;
     background: white;
     width: 100%;
     margin: 40px;
     padding: 25px;
     box-sizing: border-box;
     border-radius: 10px;
-    max-height: 960px;
-
+    max-height: 1200px;
 
 }
 
@@ -73,6 +72,7 @@ button {
     cursor: pointer;
     transition: transform 0.2s, 0.2s;
     padding-top: 2, 5%;
+    font-size: 1rem;
 
 }
 button:hover {
@@ -120,3 +120,22 @@ a {
     align-items: center;
     text-align: center;
 }
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 33px;
+}
+
+.form-input img{
+    width: 6.5%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+}
+

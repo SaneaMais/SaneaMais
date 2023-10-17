@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="../../CSS/Cadastro/style.css">
     <title>Tela de login com html e css</title>
 </head>
@@ -24,7 +24,6 @@
                         Já tem uma conta?
                         <a href="#">Entre</a>
                     </p>
-
                     <div class="form-input">
                         <label id="labelEmail" for="email">Email <span>*</span> </label>
                         <input type="text" placeholder="Digite seu email" id="email" required>
@@ -60,31 +59,35 @@
                         <input type="text" placeholder="Cep" id="cep" required>
                         <small id="textCep"></small>
                     </div>
-
                     <div class="form-input">
-                        <label id="labelSenha" for="senha">senha <span>*</span> </label>
-                        <input type="password" placeholder="Senha" id="password" required>
-                        <small id="textPassword"></small>
-                    </div>
-                    <div class="forget-password-link">
-                        <a href="#">Esqueceu sua senha?</a>
-                        <button onclick="cadastrar()">Cadastrar</button>
-                        <div id='msgError'></div>
-                        <div id='msgSuccess'></div>
-                        <small id="textForm"></small>
+                        <div class="input__wrapper">
+                            <label id="labelSenha" for="senha">senha <span>*</span> </label>
+                            <input type="password" placeholder="Senha" id="password" class="input__field" maxlength="30"
+                                required>
+                            <img alt="Eye Icon" title="Eye Icon" src="../../img/Login/eye-off.svg" class="input__icon">
+                            <small id="textPassword"></small>
+                        </div>
                     </div>
                 </div>
-            </form>
+                <div class="forget-password-link">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+                <button onclick="cadastrar()">Cadastrar</button>
+                <div id='msgError'></div>
+                <div id='msgSuccess'></div>
+                <small id="textForm"></small>
+        </div>
+        </form>
         </div>
     </main>
     <footer></footer>
-
-    <script src="../../Cadastro/validacao.js"></script>
+    <script src="../../js/Cadastro/validacao.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>$('#numero').mask('(00) 0000-00000')</script>
     <script>$('#data').mask('00/00/0000');</script>
     <script>$('#cep').mask('00000-000')</script>
+    <script src="../../js/login/senha.js"></script>
 </body>
 
 </html>
