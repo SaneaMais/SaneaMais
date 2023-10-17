@@ -73,7 +73,7 @@ button {
     transition: transform 0.2s, 0.2s;
     padding-top: 2, 5%;
     font-size: 1rem;
-
+    margin-top: 1%;
 }
 button:hover {
     background-color: #45A84A;
@@ -124,6 +124,7 @@ a {
 .input__wrapper {
     position: relative;
 }
+/* ! icon ver senha  */
 
 .input__icon {
     position: absolute;
@@ -137,5 +138,48 @@ a {
     overflow-clip-margin: content-box;
     overflow: clip;
 
+}
+/* ! icon das redes sociais */
+
+.alternative1 {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.alternative1 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;    
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.alternative1 span::before,
+main .alternative1 span::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 35%;
+    background: #333;
+}
+
+.media {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: min(45px, 33%);
+}
+
+.icon > img {
+    width: 100%;
 }
 
