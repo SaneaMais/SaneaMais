@@ -1,15 +1,24 @@
 .box-form {
   max-width: 100%;
-  background-color: var(--white-2);
+  background-color: var(--white-2); 
   width: 100%;
   padding: 35px;
   box-sizing: border-box;
   border-radius: 10px;
   max-height: 100%;
   display: flex;
+  margin-top: 80px;
 
 }
+.figura-logo{
+  position: absolute;
+  top: 25px;
+  left: 25px;
 
+}
+.logo-container img{
+  width: 50%;
+}
 .form-content {
   width: 70%;
   margin: 1%;
@@ -153,5 +162,8 @@ main .alternative1 span::after {
   }
   .titulo {
     font-size: 1.8rem;
+  }
+  .box-form{
+    margin-top: 40px;
   }
 }
