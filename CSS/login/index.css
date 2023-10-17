@@ -41,3 +41,14 @@
     text-decoration: none;
     color: var(--blue-2);
   }
+
+  /* ! Logo  */
+  .figura-logo{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  
+  }
+  .logo-container img{
+    width: 50%;
+  }
