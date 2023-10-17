@@ -1,7 +1,6 @@
-
 .box-form {
     max-width: 650px;
-    background: white;
+    background: var(--white);
     width: 100%;
     margin: 40px;
     padding: 25px;
@@ -19,7 +18,7 @@
 }
 
 .form-content label span {
-    color: #f0171b;
+    color: var(--red);
 }
 
 input[type="text"],
@@ -27,7 +26,7 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    background: #e6d9d9e7;
+    background: var(--white2);
     border-radius: 4px;
     box-sizing: border-box;
     border: none;
@@ -38,8 +37,8 @@ input[type="password"] {
 
 button {
     width: 100%;
-    background-color: #245ced;
-    color: white;
+    background-color: var(--blue3);
+    color: var(--white);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -49,19 +48,19 @@ button {
     font-size: 1rem;
     margin-top: 1%;
 }
+
 button:hover {
-    background-color: #45A84A;
+    background-color: var(--green);
 }
 
 .form-content label {
-    color: #000000;
+    color: var(--black);
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
 
 }
-
 
 .forget-password-link {
     margin-top: 20px;
@@ -71,7 +70,7 @@ button:hover {
     padding-top: 20px;
     text-align: center;
     font-size: 2em;
-    color: #072c75;
+    color: var(--blue);
     font-weight: 500;
     text-align: center;
     margin-bottom: 10px;
@@ -88,27 +87,28 @@ button:hover {
 .input__wrapper {
     position: relative;
 }
+
 /* ! icon ver senha  */
 
 .input__wrapper {
     position: relative;
-  }
-  
-  .input__field {
-    padding-left: 30px; 
-  }
-  
-  .input__icon {
+}
+
+.input__field {
+    padding-left: 30px;
+}
+
+.input__icon {
     position: absolute;
-    right: 12px; 
-    top: 70%; 
-    transform: translateY(-50%); 
-  }
-  
-  .form-input img{
+    right: 12px;
+    top: 70%;
+    transform: translateY(-50%);
+}
+
+.form-input img {
     overflow-clip-margin: content-box;
     overflow: clip;
-  }
+}
 
 
 /* ! icon das redes sociais */
@@ -124,9 +124,9 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 32px;
-    width: 100%;    
+    width: 100%;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--black-2);
     font-weight: 400;
 }
 
@@ -136,7 +136,7 @@ main .alternative1 span::after {
     display: block;
     height: 1px;
     width: 35%;
-    background: #333;
+    background: var(--black-2);
 }
 
 .media {
@@ -151,17 +151,17 @@ main .alternative1 span::after {
     width: min(45px, 33%);
 }
 
-.icon > img {
+.icon>img {
     width: 100%;
 }
 
-
 @media (max-width: 440px) {
-    .form-content>.sub-titulo{
+    .form-content>.sub-titulo {
         font-size: 1.3rem;
     }
-    .form-content h3{
+
+    .form-content h3 {
         width: 100%;
-        font-size: 1.8rem;  
+        font-size: 1.8rem;
     }
-  }
+}
