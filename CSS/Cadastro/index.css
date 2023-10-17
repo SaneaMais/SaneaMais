@@ -14,11 +14,7 @@ body {
     justify-content: center;   
     background-size: cover;
 }
-img{
-    width: 50%;
-    height: auto;
 
-}
 main{
     display: flex;
     align-items: center;

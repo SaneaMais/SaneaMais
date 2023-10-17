@@ -90,19 +90,27 @@ button:hover {
 }
 /* ! icon ver senha  */
 
-.input__icon {
+.input__wrapper {
+    position: relative;
+  }
+  
+  .input__field {
+    padding-left: 30px; 
+  }
+  
+  .input__icon {
     position: absolute;
-    right: 10px;
-    cursor: pointer;
-    top: 33px;
-}
-
-.form-input img{
-    width: 6.5%;/* Em teste  */
+    right: 12px; 
+    top: 70%; 
+    transform: translateY(-50%); 
+  }
+  
+  .form-input img{
     overflow-clip-margin: content-box;
     overflow: clip;
+  }
 
-}
+
 /* ! icon das redes sociais */
 
 .alternative1 {
