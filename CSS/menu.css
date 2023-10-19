@@ -298,7 +298,6 @@ nav .close-icon {
     }
 
     .nav.active .hamburger {
-        position: fixed; 
         top: 30px;
         right: 20px;
         border-top-color: transparent;
