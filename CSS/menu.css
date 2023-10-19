@@ -4,6 +4,11 @@
     padding: 0 5%;
 }
 
+.hidden {
+    display: none;
+  }
+
+  
 .btn {
     background-color: #84bc26;
     color: white;
@@ -85,6 +90,7 @@ nav .close-icon {
     color: white;
 }
 
+
 .banner {
     display: flex;
     justify-content: center;
@@ -111,13 +117,14 @@ nav .close-icon {
 .nav-list {
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items: center; 
 
 }
 
+
 .nav-list a {
     color: #fff;
-    padding-block: 16px;
+    /* padding-block: 16px; */
     text-decoration: none;
 }
 
@@ -251,29 +258,21 @@ nav .close-icon {
         display: block;
         z-index: 1;
     }
-    .nav{
-        max-height: 500px;
-    }
 
     .nav-list {
         position: fixed;
         top: 0;
         left: 0;
         width: 108vw;
-        height: 108vh;
+        height: 108vh; 
         background: #184b88;
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
         flex-direction: column;
         align-items: center;
         overflow-y: hidden;
-        pointer-events: all;
-        /* position: fixed; */
-
-    }
-
-    .nav-list a {
-        opacity: 0;
+        pointer-events: none;
+        
     }
 
     .nav-list li:nth-child(1) a {
@@ -299,9 +298,9 @@ nav .close-icon {
     }
 
     .nav.active .hamburger {
-        position: fixed;
-        top: 26px;
-        right: 16px;
+        position: fixed; 
+        top: 30px;
+        right: 20px;
         border-top-color: transparent;
     }
 
