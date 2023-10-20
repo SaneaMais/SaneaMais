@@ -47,13 +47,12 @@ form {
 
 /* ! Logo  */
 
-.figura-logo {
-    position: absolute;
-    top: 25px;
-    left: 40px;
-
+.logo-container{
+    text-align: center;
 }
 
 .logo-container img {
-    width: 50%;
+    width: 150PX;
+    margin-bottom: 10PX;
+    
 }

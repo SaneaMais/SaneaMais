@@ -113,6 +113,11 @@ nav .close-icon {
     font-weight: lighter;
     margin: 18px 0;
 }
+.banner-text > img {
+   max-width: 100%;
+    height: auto;
+
+}
 
 .nav-list {
     display: flex;
@@ -313,3 +318,4 @@ nav .close-icon {
     }
 
 }
+@media only screen and (max-width: 550px) { .banner-text > img { min-width: 250px; } }
