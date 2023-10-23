@@ -83,20 +83,12 @@ body {
 
 section,
 footer {
-  padding: 54px 0;
-}
-
-h3 {
-  font-size: 50px;
-}
-
-p {
-  color: #0000009c;
-  font-size: 20px;
+  padding: 20px 0;
 }
 
 
 /* faca mais */
+
 .faca-mais .container {
   display: flex;
   align-items: center;
@@ -126,8 +118,10 @@ p {
 }
 
 .depoimentos h3 {
+  margin-top: 20px;
   text-align: center;
   color: rgba(7, 44, 117);
+  font-size: 3.5rem;
 }
 
 .depoimentos p {
@@ -209,6 +203,39 @@ p {
   color: #84bc26;
 }
 
+@media(max-width: 440px) {
+
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon {
+      display: none;
+  }
+
+  .wrapper .row {
+      margin: 10px 0;
+  }
+}
+@media(max-width: 790px) {
+  .wrapper .center-line {
+      left: 40px;
+  }
+
+  .wrapper .row {
+      margin: 30px 0 3px 60px;
+  }
+
+  .wrapper .row section {
+      width: 100%;
+  }
+
+  .row-1 section::before {
+      left: -7px;
+  }
+
+  .row-1 section .icon {
+      left: -60px;
+  }
+}
 
 
 @media(max-width: 790px) {
@@ -246,192 +273,6 @@ p {
   }
 }
 
-
-.containerr {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background-image: url(../img/curva.svg);
-  background-position: center bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.slider {
-  display: block;
-  height: 100%;
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.slide-img {
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
-  padding: 40px;
-  background-image: url(../img/Design\ sem\ nome\ \(1\).svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.slide-text {
-  padding-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-image: url(../img/pattern-quotes.svg);
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position: top center;
-}
-
-.testimonial-text {
-  font-weight: 800;
-  font-size: .7rem;
-  line-height: 1rem;
-  color: hsl(240, 38%, 20%);
-  font-size: 16px;
-}
-
-.author-text {
-  margin-top: 20px;
-  color: hsl(240, 38%, 20%);
-  font-size: .5rem;
-  font-weight: 700;
-}
-
-.author-text span {
-  color: rgb(7, 44, 117);
-  font-weight: 900;
-  display: block;
-  font-size: 60px;
-}
-
-.slide-img img {
-  height: 100%;
-  width: 300px;
-}
-
-.prev,
-.next {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  cursor: pointer;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: antiquewhite;
-}
-
-.buttons {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 315px;
-  width: 90px;
-  height: 45px;
-  box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
-  border-radius: 50px;
-  background-color: white;
-  overflow: hidden;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-.next::after,
-.prev::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-}
-
-.next::after {
-  background-image: url(../img/icon-next.svg);
-}
-
-.prev::after {
-  background-image: url(../img/icon-prev.svg);
-}
-
-/* !  */
-
-@media only screen and (min-width: 768px) {
-  .slide {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .slide-text {
-    background-position: 10% top;
-    background-size: 100px;
-    align-items: flex-start;
-  }
-
-  .slide-img {
-    margin-left: -100px;
-    z-index: -1;
-  }
-
-  .slide-img img {
-    width: 400px;
-  }
-
-  .buttons {
-    top: 415px;
-    transform: translate(0);
-    left: calc(100% - 400px);
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .slide-img img {
-    width: 200px;
-  }
-
-  .slide-img {
-    padding: 10px;
-  }
-
-  .buttons {
-    top: 180px;
-  }
-}
-
-/* clientes */
-.clientes h3,
-.clientes p {
-  text-align: center;
-}
-
 .clientes .container div {
   display: flex;
   align-items: center;
@@ -443,8 +284,9 @@ p {
 .footer {
   background-color: #070045;
   text-align: center;
+  padding: 40px;
+  
 }
-
 
 .footer i {
   color: #84bc26;
@@ -456,6 +298,7 @@ p {
 }
 
 .footer p {
+  font-size: 1.5rem;
   margin-top: 10px;
   color: white;
 }
@@ -671,8 +514,6 @@ p {
 .contacto-info .right-side button {
   border: none;
 }
-/* ?                              ???????????????? */
-
 
 @media (max-width:500px) {
   .banner .banner-text h1 {
