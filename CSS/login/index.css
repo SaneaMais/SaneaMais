@@ -1,55 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
 
 :root {
-  --white: #fff ;
-  --white-2:#e9ebe7; 
-  --blue:#245ced;
-  --red: #f0171b; 
-  --blue-2:  #070045;
-  --green: #45A84A; 
+  --white: #fff;
+  --white-2: #e9ebe7;
+  --blue: #245ced;
+  --red: #f0171b;
+  --blue-2: #070045;
+  --green: #45A84A;
 
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Source Sans Pro", sans-serif;
-  }
-  
-  body {
-    background: linear-gradient(90deg, rgba(7, 44, 117) 40%, #74f005 100%);  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-  }
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  h3,p{
-    text-align: center;
-    margin: 1%;
-  }
-  form{
-    margin: 20px;
-  }
-  a{
-    text-decoration: none;
-    color: var(--blue-2);
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
 
-  /* ! Logo  */
-  .figura-logo{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-  
-  }
-  .logo-container img{
-    width: 50%;
-  }
+body {
+  background: linear-gradient(90deg, rgba(7, 44, 117) 40%, #74f005 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h3,
+p {
+  text-align: center;
+  margin: 1%;
+}
+
+form {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-2);
+}
+
+/* ! Logo  */
+.figura-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+}
+
+.logo-container img {
+  width: 50%;
+}
