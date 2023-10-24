@@ -170,9 +170,10 @@ footer {
 
 .depoimentos .card-item img {
   border-radius: 100%;
-  width: 110px;
+  width: 130px;
+  height: 130px;
   display: block;
-  margin: 10px auto;
+  margin: 25px auto;
 }
 
 .depoimentos .card-item .nome-user {
