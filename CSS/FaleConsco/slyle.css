@@ -1,0 +1,125 @@
+.Logo img {
+    width: 150px;
+}
+.font{
+    max-width: 500px;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.CorpoMeio {
+    background: var(--white-2);
+    padding: 20px 60px;
+    display: flex;
+}
+
+.sub-menu {
+    background: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 60px;
+    font-size: 1.2rem;
+}
+
+.container-textearea {
+    width: 100%;
+
+}
+
+.input-box {
+    margin: 20px 0;
+}
+
+.containerMensagem {
+    max-width: 500px;
+    border: solid 1px var(--black);
+    padding: 20px;
+    margin: 10px 60px;
+    border-radius: 10px;
+    max-height: 100%;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    border-bottom: 1px solid var(--black);
+    cursor: text;
+    width: 70%;
+}
+
+.input-field i {
+    font-size: 18px;
+    cursor: text;
+    color: var(--black);
+}
+
+.input-field input {
+    border: none;
+    width: 260px;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+.button {
+    margin-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* .linha-vertical {
+    width: 2px; 
+    height: 100px; 
+    background-color: black; 
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:660px){
+    .img{
+        display: none;
+    }
+    .font{
+        font-size: 0.93rem ;
+    }
+    .CorpoMeio{
+        padding:0; 
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .font{
+        max-width: 100%;
+        padding: 20px ;
+    }
+}
+@media(max-width:400px){
+    .font{
+        font-size: 0.9rem;
+    }
+    .containerMensagem{
+        margin: 10px 10px;
+    }
+    .CorpoMeio{
+        padding:0; 
+    }
+    .sub-menu{
+        padding-left: 20px;
+    }
+}

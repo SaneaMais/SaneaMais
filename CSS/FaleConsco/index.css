@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --blue-2: #070045;
+  --black: #000;
+  --white-2: #e9ebe7;
+  --blue:rgba(7, 44, 117)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+header {
+  padding: 10px 30px;
+
+}
+footer{
+  background: var(--blue);
+  padding: 40px;
+}
+textarea{
+  margin: 15px 0;
+  width: 90%;
+  outline: none;
+  border-radius: 2px;
+  resize: none;
+  font-size: 1rem;
+  padding: 10px;
+}
+button{
+  padding: 5px 30px;
+  border-radius: 3px;
+  background-color: var(--white);
+  cursor: pointer;
+
+}
