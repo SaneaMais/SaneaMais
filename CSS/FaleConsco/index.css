@@ -5,7 +5,8 @@
   --blue-2: #070045;
   --black: #000;
   --white-2: #e9ebe7;
-  --blue:rgba(7, 44, 117)
+  --blue:rgba(7, 44, 117);
+  --green: #84bc26;
 }
 
 * {
