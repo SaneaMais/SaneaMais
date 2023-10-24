@@ -1,14 +1,12 @@
 .box-form {
   max-width: 100%;
-  background-color: var(--white-2); 
+  background-color: var(--white-2);
   width: 100%;
-  padding: 35px;
+  padding: 20px;
   box-sizing: border-box;
   border-radius: 10px;
   max-height: 100%;
   display: flex;
-  margin-top: 80px;
-
 }
 
 .form-content {
@@ -32,7 +30,7 @@ input[type="password"] {
 
 button {
   width: 100%;
-  background-color:var(--blue); 
+  background-color: var(--blue);
   color: var(--white);
   padding: 10px 20px;
   border: none;
@@ -42,6 +40,7 @@ button {
   font-size: 1rem;
   margin-top: 5%;
 }
+
 button:hover {
   background-color: var(--green);
 }
@@ -52,21 +51,32 @@ button:hover {
 
 }
 
-.form-figura {
-  text-align: center;
-  align-items: center;
+.logo img {
+  width: 80%;
+  height: auto;
+  margin: 10px  40px;
+}
+
+.container-img {
   display: flex;
-  max-width: 400px;
-  
+  flex-direction: column;
+  align-items: center;
+/*   justify-content: center;
+  padding: 20px; */
+
 }
 
-.form-figura img {
+.form-figura > img {
+  display: block;
   width: 100%;
+  margin-top: 15px;
 
 }
+
+
 
 .form-content label span {
-  color:var(--red);
+  color: var(--red);
 }
 
 .titulo {
@@ -77,6 +87,7 @@ button:hover {
 .sub-titulo {
   font-size: 1.2rem;
 }
+
 /* ! icon da redes sociais*/
 
 .alternative1 {
@@ -90,9 +101,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   gap: 32px;
-  width: 100%;    
+  width: 100%;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--black);
   font-weight: 400;
 }
 
@@ -102,7 +113,7 @@ main .alternative1 span::after {
   display: block;
   height: 1px;
   width: 35%;
-  background: #333;
+  background: var(--black);
 }
 
 .media {
@@ -117,31 +128,30 @@ main .alternative1 span::after {
   width: min(45px, 33%);
 }
 
-.icon > img {
+.icon>img {
   width: 100%;
 }
+
 /* ! icon ver senha  */
 .input__wrapper {
   position: relative;
 }
 
 .input__field {
-  padding-left: 30px; 
+  padding-left: 30px;
 }
 
 .input__icon {
   position: absolute;
-  right: 12px; 
-  top: 70%; 
-  transform: translateY(-50%); 
+  right: 12px;
+  top: 70%;
+  transform: translateY(-50%);
 }
 
-.form-input img{
+.form-input img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
-
-
 @media (max-width: 740px) {
   .box-form {
     flex-direction: column;
@@ -155,10 +165,24 @@ main .alternative1 span::after {
   .form-figura {
     display: none;
   }
+
   .titulo {
     font-size: 1.8rem;
+    margin-top: 60px;
   }
-  .box-form{
+
+  .box-form {
     margin-top: 40px;
+    position: relative; 
+    margin-bottom: 0; 
+  padding-bottom: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 15px;
+    width: 60%; 
   }
 }
+@media(max-width:420px){.logo{top: 30px;}}
+@media(max-width:320px){.logo{top: 20px;}}

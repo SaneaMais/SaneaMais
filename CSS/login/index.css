@@ -7,6 +7,7 @@
   --red: #f0171b;
   --blue-2: #070045;
   --green: #45A84A;
+  --black: #333; 
 
 }
 
@@ -46,16 +47,4 @@ form {
 a {
   text-decoration: none;
   color: var(--blue-2);
-}
-
-/* ! Logo  */
-.figura-logo {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-
-}
-
-.logo-container img {
-  width: 50%;
 }
