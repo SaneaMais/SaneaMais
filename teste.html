@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Estilos para o botão de abertura do primeiro container */
+  #openButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Estilos para o primeiro container */
+  #imageContainer1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s;
+  }
+
+  /* Estilos para o conteúdo dentro do primeiro container */
+  #imageContent {
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  /* Estilos para o botão de fechar no canto superior esquerdo do primeiro container */
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Estilos para o botão "Próximo" no canto superior direito do primeiro container */
+  #nextButton1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Estilos para a área de visualização da imagem no primeiro container */
+  #imagePreview {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* Estilos para a área de seleção de arquivo e arrastar e soltar no primeiro container */
+  #imageUpload {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    display: block;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+
+  /* Estilos para o botão "Escolher Arquivo" no primeiro container */
+  #chooseFileButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Estilos para o segundo container */
+  #imageContainer2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s;
+  }
+
+  /* Estilos para o conteúdo dentro do segundo container */
+  #imageContent2 {
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  /* Estilos para o botão de fechar no canto superior esquerdo do segundo container */
+  #closeButton2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Estilos para o botão "Próximo" no canto superior direito do segundo container */
+  #nextButton2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<button id="openButton">Abrir Container</button>
+
+<!-- Primeiro Container -->
+<div id="imageContainer1">
+  <div id="imageContent">
+    <button id="closeButton">Fechar</button>
+    <button id="nextButton1">Próximo</button>
+    <div id="imageUpload" ondragover="event.preventDefault();" ondrop="handleDrop(event);">
+      <input type="file" id="imageInput" accept="image/*" style="display: none;">
+      <label for="imageInput" id="chooseFileButton">Arraste a imagem aqui ou clique para escolher</label>
+    </div>
+    <div id="imagePreview">
+      <img id="uploadedImage" ondragover="event.preventDefault();" ondrop="handleImageDrop(event);">
+    </div>
+  </div>
+</div>
+
+<!-- Segundo Container -->
+<div id="imageContainer2">
+  <div id="imageContent2">
+    <button id="closeButton2">Fechar</button>
+    <button id="nextButton2">Próximo</button>
+    <div id="imagePreview2">
+      <img id="uploadedImage2">
+    </div>
+  </div>
+</div>
+
+<script>
+  // Função para abrir o primeiro container
+  document.getElementById("openButton").addEventListener("click", function() {
+    document.getElementById("imageContainer1").style.display = "block";
+  });
+
+  // Função para fechar o primeiro container ou ir para o segundo container
+  document.getElementById("closeButton").addEventListener("click", function() {
+    document.getElementById("imageContainer1").style.display = "none";
+  });
+
+  // Função para ir para o segundo container
+  document.getElementById("nextButton1").addEventListener("click", function() {
+    document.getElementById("imageContainer1").style.display = "none";
+    document.getElementById("imageContainer2").style.display = "block";
+    // Copia a imagem do primeiro container para o segundo container
+    var image1 = document.getElementById("uploadedImage");
+    var image2 = document.getElementById("uploadedImage2");
+    image2.src = image1.src;
+  });
+
+  // Função para voltar do segundo container para o primeiro container
+  document.getElementById("closeButton2").addEventListener("click", function() {
+    document.getElementById("imageContainer2").style.display = "none";
+    document.getElementById("imageContainer1").style.display = "block";
+  })
+
+  // Função para exibir a imagem no primeiro container ao selecionar um arquivo
+  function handleDrop(event) {
+    event.preventDefault();
+    var file = event.dataTransfer.files[0];
+    var image = document.getElementById("uploadedImage");
+    image.src = URL.createObjectURL(file);
+    document.getElementById("imagePreview").style.display = "block";
+    document.getElementById("chooseFileButton").style.display = "block";
+    document.getElementById("imageUpload").style.display = "none";
+  }
+
+  // Função para exibir a imagem no segundo container ao selecionar um arquivo
+  document.getElementById("imageInput").addEventListener("change", function() {
+    var file = this.files[0];
+    var image = document.getElementById("uploadedImage");
+    image.src = URL.createObjectURL(file);
+    document.getElementById("imagePreview").style.display = "block";
+    document.getElementById("chooseFileButton").style.display = "block";
+    document.getElementById("imageUpload").style.display = "none";
+  })
+
+  // Função para substituir a imagem existente por uma nova imagem arrastada no primeiro container
+  function handleImageDrop(event) {
+    event.preventDefault();
+    var file = event.dataTransfer.files[0];
+    var image = document.getElementById("uploadedImage");
+    image.src = URL.createObjectURL(file);
+  }
+</script>
+
+</body>
+</html>
