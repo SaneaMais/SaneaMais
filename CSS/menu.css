@@ -277,6 +277,9 @@ nav .close-icon {
         align-items: center;
         overflow-y: hidden;
         pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-content: center;
         
     }
 
