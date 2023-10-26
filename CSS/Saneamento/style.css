@@ -1,0 +1,63 @@
+/* Metade do código está aqui  */
+.servicos h3 {
+    text-align: center;
+    color: #84bc26;
+  }
+  
+  .sanea .sanea-text>h3 {
+    color: #84bc26;
+  }
+  
+  .sanea .sanea-text>p {
+    text-align: justify;
+  
+  }
+  
+  .sanea .sanea-img {
+    text-align: center;
+  }
+  
+  .servicos .container>p {
+    text-align: center;
+  }
+  
+  .servicos .rows-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .servicos .row-card-item {
+    background-color: #c9ff9a;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+    transition: 0.3s;
+  }
+  
+  .servicos .row-card-item:hover {
+    background-color: #84bc26;
+  }
+  
+  .servicos .row-card-item:hover p {
+    color: white;
+  }
+  
+  .servicos .row-card-item img {
+    background-color: #070045;
+    border-radius: 14px;
+    width: 70px;
+    padding: 9px;
+  }
+  
+  .servicos .row-card-item p.nome-servico {
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  
+  .servicos .row-card-item p.descricao-servico {
+    transition: 0.3s;
+  }
+  

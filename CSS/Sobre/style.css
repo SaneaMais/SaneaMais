@@ -1,0 +1,35 @@
+/* Página sobre */
+.sobre .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sobre .sobre-text {
+  width: 50%;
+  padding-right: 40px;
+}
+
+.sobre .sobre-text p {
+  margin: 18px 0;
+  color: #000000a6;
+}
+
+.sobre .sobre-text h3 {
+  margin: 18px 0;
+  color: #84bc26;
+}
+
+.sobre .sobre-text h2 {
+  margin: 18px 0;
+  color: #84bc26;
+}
+
+.sobre .sobre-img {
+  width: 50%;
+}
+
+.sobre .sobre-img img {
+  width: 100%;
+  border-radius: 10px;
+}
