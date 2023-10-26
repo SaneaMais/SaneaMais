@@ -26,6 +26,7 @@ label.btn {
 
 .btn {
     cursor: pointer;
+    /* border: none; */
 }
 
 .text-light {
