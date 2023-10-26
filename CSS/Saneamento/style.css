@@ -72,10 +72,13 @@
 .servicos .row-card-item p.descricao-servico {
   transition: 0.3s;
 }
+.font-sanea{
+  font-size: 2.5rem;
+}
 
 /* Criando 3 tamanho de tela para ajustamentos futuros  */
 
 @media (max-width:580px) {.text-banner{font-size: 3rem;}}
 @media (max-width:470px) {.text-banner{font-size: 2.3rem;}}
-@media (max-width:340px) {.text-banner{font-size: 2rem;}}
+@media (max-width:340px) {.text-banner{font-size: 2rem;} .area{ padding: 10px;} .font-sanea{ font-size:2rem }}
 
