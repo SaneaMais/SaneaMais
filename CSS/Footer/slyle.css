@@ -235,7 +235,7 @@
   }
 
   #Termos {
-  display: none;
+    display: none;
   }
 }
 
@@ -267,37 +267,38 @@
   @media (max-width: 520px) {
     #footer::before {
       top: 130px;
-      /* ou outro valor que você quiser */
     }
 
     .footer-content .footer-top {
       flex-direction: column;
       align-items: center;
-      /* Centralize o conteúdo verticalmente */
       margin-top: -20px;
-      /* Defina uma margem superior negativa para a seção com a logo. */
+
     }
 
     .footer-media-icons {
       margin-top: 10px;
-      /* Adicione uma margem superior positiva para criar espaço entre os ícones e a logo. */
+
     }
+
     .footer-link-boxes {
       display: grid;
       width: 100%;
-     /* Defina o número de colunas desejado */
+
     }
-    .footer-box:nth-child(3) { 
-     grid-column: span 2; 
+
+    .footer-box:nth-child(3) {
+      grid-column: span 2;
     }
-    .input-box button{
-       width: 150%;
+
+    .input-box button {
+      width: 150%;
     }
-    .footer-box li{
+
+    .footer-box li {
       width: 300%;
     }
-    
-    
+
   }
 
   @media(max-width: 430px) {
@@ -308,7 +309,8 @@
     .footer-content {
       padding: 40px 25px;
     }
-    .footer-box{
+
+    .footer-box {
       margin-top: 10px;
     }
 
