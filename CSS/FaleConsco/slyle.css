@@ -1,17 +1,19 @@
-.Logo img {
-    width: 150px;
-}
+
 .formFale{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
     
 }
+
 .fcontainer{
-    background-color: var(--blue);
+    background-color:  #0c48a8;
     padding: 20px;
+    border-radius: 10px;
 }
+
 .font{
     font-size: 1.8rem;
     padding: 20px;
@@ -24,14 +26,13 @@
     text-align: center;
     margin: 10px 0; 
     font-size: 1.2rem;
+    color: #fff;
 }
 .font-FaleConosco > h1{
     text-align: center;
-    font-size: 2.2rem;
-/*     background: var(--green);
-    color: var(--white);
-    border-radius: 10px;
-    padding: 5px; */
+    font-size: 2.7rem;
+    color:  #84bc26;
+
 }
 
 .font-form {
@@ -103,7 +104,7 @@
 /* sub-menu */
 .Sub-menuF{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 

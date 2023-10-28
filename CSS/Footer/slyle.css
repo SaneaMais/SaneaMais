@@ -58,6 +58,7 @@
 }
 
 .input-box button {
+  color: #140B5C;
   width: 100%;
   padding: 8px 0;
   border-radius: 5px;
@@ -69,6 +70,9 @@
   font-size: 1rem;
 }
 
+.input-box button a  {
+  display: block;
+}
 .input-box button:hover {
   background-color: #140B5C;
   color: #fff;
