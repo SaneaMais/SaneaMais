@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="../../CSS/FaleConsco/index.css">
-    <link rel="stylesheet" href="../../CSS/FaleConsco/slyle.css">
+   <!--  <link rel="stylesheet" href="../../CSS/FaleConsco/slyle.css"> -->
     <link rel="stylesheet" href="../../CSS/FaleConsco/menuFale.css">
+   <!--  <link rel="stylesheet" href="../../CSS/Footer/slyle.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.9/inputmask.min.js"></script>
     <title>Fale consoco</title>
 </head>
@@ -24,10 +26,10 @@
                         <img src="../../img/LOGO1.png" alt="Logo" />
                     </a>
                     <ul class="ul nav-list">
-                        <a href="../../index.html">Home</a>
-                        <a href="../../HTML/Sobre/sobre.html">Sobre</a>
-                        <a href="../../HTML/Serviço/servicos.html">Saneamento</a>
-                        <a href="../../HTML/login/index.html">Entrar</a>
+                        <a href="../../index.html" id="item-nav">Home</a>
+                        <a href="../../HTML/Sobre/sobre.html"id="item-nav">Sobre</a>
+                        <a href="../../HTML/Serviço/servicos.html"id="item-nav">Saneamento</a>
+                        <a href="../../HTML/login/index.html"id="item-nav">Entrar</a>
                         <a class="btn" href="../../HTML/cadastro/index.html">Cadastrar</a>
                     </ul>
                     <button class="hamburger"></button>
@@ -35,12 +37,12 @@
             </div>
         </div>
     </header>
-    <main>
+   <!--  <main>
 
         <div class="Sub-menuF">
-            <div>
+            <div class="sub-font">
                 <h1 class="Font">Fale Conosco !</h1>
-                <h1>tire suas dúvidas ou envie uma mensagem</h1>
+                <p>tire suas dúvidas ou envie uma mensagem</p>
             </div>
             <div class="ImgFaleConosco">
                 <img src="../../img/Faleconosco/MicrosoftTeams-image (1).png" alt="">
@@ -97,10 +99,56 @@
         </form>
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../../img/LOGO1.png" alt="Logo">
+                </div>
+                <div class="footer-media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-link-boxes">
+                <ul class="footer-box">
+                    <li class="footer-link-name">SaneaMais</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./HTML/Sobre/sobre.html">Sobre </a></li>
+                    <li><a href="./HTML/Serviço/servicos.html">Saneamento </a></li>
+                </ul>
+                <ul class="footer-box">
+                    <li class="footer-link-name">Publicações</li>
+                    <li><a href="#">Denúncias destaques</a></li>
+                </ul>
+                <ul class="footer-box" id="footer-wi">
+                    <li class="footer-link-name">Ongs</li>
+                    <li><a href="https://associacaobiosaneamento.org/">Associação Biosaneamento</a></li>
+                    <li><a href="https://institutoigua.org.br/">Instituto Iguá Saneamento</a></li>
+                    <li><a href="https://teto.org.br/">TETO Brasil</a></li>
+                </ul>
+                <ul class="footer-box input-box" id="footer-wi">
+                    <li class="footer-link-name">Contato e suporte</li>
+                    <li><a href="./HTML/FaleConoco/index.html"><button>Fale conosco</button></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-details">
+            <div class="footer-bottom-text">
+                <span class="footer-copyright-text">Copyright © 2023 <a href="#">SaneaMais. Todos os direitos
+                        reservados</a></span>
+                <div class="footer-policy-terms ">
+                    <a href="#">Política de privacidade</a>
+                    <a href="#" id="Termos">Termos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
 
     <script src="../../js/FaleConsoco/FaleConosco.js"></script>
-    
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
     padding: 0 5%;
 }
 
-  
+
 .btn {
     background-color: #84bc26;
     color: white;
@@ -22,6 +22,10 @@
 
 .btn:hover {
     background-color: #404093;
+}
+
+#item-nav {
+    color: #0c48a8;
 }
 
 @keyframes animate-outline {
@@ -58,7 +62,7 @@ nav ul a {
 
 nav ul a:not(.btn)::after {
     content: "";
-    background-color:var(--blue);
+    background-color: var(--blue);
     height: 3px;
     width: 0%;
     display: block;
@@ -84,45 +88,16 @@ nav .close-icon {
 }
 
 
-.banner {
-    display: flex;
-    justify-content: center;
-}
-
-.banner .banner-text {
-    margin: 150px;
-    text-align: center;
-    padding: 0 90px;
-}
-
-.banner .banner-text h1 {
-    font-size: 96px;
-    color: var(--blue);
-}
-
-.banner .banner-text p {
-    font-size: 20px;
-    color: var(--blue);
-    font-weight: lighter;
-    margin: 18px 0;
-}
-.banner-text > img {
-   max-width: 100%;
-    height: auto;
-
-}
 
 .nav-list {
     display: flex;
     list-style: none;
-    align-items: center; 
+    align-items: center;
 
 }
 
 
 .nav-list a {
-    color: var(--blue);
-    /* padding-block: 16px; */
     text-decoration: none;
 }
 
@@ -131,7 +106,7 @@ nav .close-icon {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid var(--blue);
+    border-top: 4px solid var(--blue);
     cursor: pointer;
 }
 
@@ -139,10 +114,10 @@ nav .close-icon {
 .hamburger::before {
     content: " ";
     display: block;
-    width: 30px;
-    height: 3px;
+    width: 40px;
+    height: 4px;
     background: var(--blue);
-    margin-top: 5px;
+    margin-top: 4px;
     position: relative;
     transition: 0.3s;
 }
@@ -161,6 +136,10 @@ nav .close-icon {
         clip-path: circle(0% at 100% 0);
         transition: 0.7s;
 
+    }
+
+    #item-nav {
+        color: #fff;
     }
 
     .ul.open {
@@ -183,7 +162,7 @@ nav .close-icon {
         right: 28px;
     }
 
-   
+
     .faca-mais .faca-mais-text {
         margin-top: 10px;
         padding: 0 20px;
@@ -203,7 +182,7 @@ nav .close-icon {
         width: 100%;
     }
 
-    
+
     .banner .banner-text {
         padding: 0;
         margin: 80px;
@@ -257,7 +236,7 @@ nav .close-icon {
         top: 0;
         left: 0;
         width: 108vw;
-        height: 108vh; 
+        height: 108vh;
         background: #184b88;
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
@@ -268,7 +247,7 @@ nav .close-icon {
         display: flex;
         justify-content: center;
         align-content: center;
-        
+
     }
 
     .nav-list li:nth-child(1) a {
@@ -309,9 +288,9 @@ nav .close-icon {
     }
 
 }
+
 @media(max-width:1000px) {
     .ImgFaleConosco img {
         display: none;
     }
 }
-

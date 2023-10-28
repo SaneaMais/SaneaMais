@@ -95,17 +95,22 @@
 }
 
 
-/* .linha-vertical {
-    width: 2px; 
-    height: 100px; 
-    background-color: black; 
-}
- */
-/* sub-menu */
 .Sub-menuF{
     display: flex;
     justify-content: space-around;
 }
+.sub-font h1{
+    color: #0c48a8;
+    font-size:3rem;
+    margin: 10px 100px ;
+}
+.sub-font > p{
+    width: 80%;
+    color: #0c48a8;
+    font-size: 3.2rem;
+    margin-left: 100px;
+}
+
 
 
 @media(max-width:660px){    

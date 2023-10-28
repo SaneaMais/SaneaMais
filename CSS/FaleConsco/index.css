@@ -19,10 +19,6 @@ header {
   padding: 10px 30px;
 
 }
-footer{
-  background: var(--blue);
-  padding: 40px;
-}
 textarea{
   margin: 15px 0;
   width: 90%;
@@ -32,10 +28,12 @@ textarea{
   font-size: 1rem;
   padding: 10px;
 }
-button{
+/* button{
   padding: 5px 30px;
   border-radius: 3px;
   background-color: var(--white);
   cursor: pointer;
+  border: 1px solid var(--black);
 
 }
+ */
