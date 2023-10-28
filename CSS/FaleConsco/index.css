@@ -21,19 +21,16 @@ header {
 }
 textarea{
   margin: 15px 0;
-  width: 90%;
+  width: 100%;
   outline: none;
   border-radius: 2px;
   resize: none;
   font-size: 1rem;
   padding: 10px;
 }
-/* button{
-  padding: 5px 30px;
-  border-radius: 3px;
-  background-color: var(--white);
-  cursor: pointer;
-  border: 1px solid var(--black);
-
+footer{
+  margin-top: 20px;
 }
- */
+main{
+  margin: 3px;
+}

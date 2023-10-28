@@ -1,65 +1,66 @@
 
-.formFale{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-    
-}
-
-.fcontainer{
-    background-color:  #0c48a8;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.font{
+.font {
     font-size: 1.8rem;
     padding: 20px;
     color: var(--white);
 
 }
-.font-FaleConosco > p{
+.nav img {
+    margin-right: 10px;
+}
+
+.font-FaleConosco>p {
     padding: 5px;
-    max-width: 500px;
     text-align: center;
-    margin: 10px 0; 
+    margin: 10px 0;
     font-size: 1.2rem;
     color: #fff;
 }
-.font-FaleConosco > h1{
+
+.font-FaleConosco > h1 {
     text-align: center;
     font-size: 2.7rem;
-    color:  #84bc26;
+    color: #84bc26;
+    margin: 0 10px;
 
 }
 
-.font-form {
-    margin: 10px 0;
+.Espacamento h2{
+    color:  #333333;
 }
+/* todo: formulario  */
 
 
-.container-textearea {
+.formFale {
+    margin: 0 auto;
     width: 100%;
-
+    display: flex;
+    justify-content: center;
 }
 
-.input-box {
+
+.fcontainer {
+    background-color: #0c48a8;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.input-box-form {
     margin: 20px 0;
 }
 
 .containerMensagem {
-    max-width: 500px;
     border: solid 1px var(--black);
     padding: 20px;
     border-radius: 10px;
-    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--white);
+
 }
+
 
 .input-field {
     display: flex;
@@ -68,7 +69,7 @@
     padding: 3px;
     border-bottom: 1px solid var(--black);
     cursor: text;
-    width: 80%;
+    width: 90%;
 }
 
 .input-field i {
@@ -79,7 +80,7 @@
 
 .input-field input {
     border: none;
-    width: 260px;
+    width: 100%;
     background-color: transparent;
     font-size: 15px;
 }
@@ -93,53 +94,78 @@
     display: flex;
     justify-content: flex-end;
 }
+.button button{
+    padding: 5px 30px;
+    border-radius: 3px;
+    background-color: var(--white);
+    cursor: pointer;
+    border: 1px solid var(--black);
+  }
+    
 
+/* todo:  fim */
 
-.Sub-menuF{
+/*  ! sub  */
+
+.Sub-menuF {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly; 
+    margin: 20px 40px;
+    padding-left: 40px;
 }
-.sub-font h1{
+
+.sub-font h1 {
     color: #0c48a8;
-    font-size:3rem;
-    margin: 10px 100px ;
+    font-size: 3.5rem;
+    font-weight: bolder;
 }
-.sub-font > p{
-    width: 80%;
+
+.sub-font > p {
+    width: 100%;
     color: #0c48a8;
-    font-size: 3.2rem;
-    margin-left: 100px;
+    font-size: 4rem;
+    margin-top: 10px;
 }
 
+/* reponsividae  */
 
+@media(max-width:660px) {
 
-@media(max-width:660px){    
-    .font{
-        font-size: 0.93rem ;
+    .CorpoMeio {padding: 50px;text-align: center;justify-content: center;display: flex;align-items: center;}
+
+    .font {max-width: 100%;padding: 20px;}
+
+    .Sub-menuF  {
+        padding: 10px 10px;
+      
     }
-    .CorpoMeio{
-        padding: 50px ; 
+    .sub-font p {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+
+    .sub-font h1{
         text-align: center;
-        justify-content: center;
-        display: flex;
-        align-items: center;
+        font-size: 3.2rem;
+        margin: 10px 0;
     }
-    .font{
-        max-width: 100%;
-        padding: 20px ;
+    .sub-font p {
+        text-align: center;
+        font-size: 2rem;
+        width: 100%;
     }
-}
-@media(max-width:400px){
-    .font{
-        font-size: 0.9rem;
+    .font {font-size: 0.9rem;}
+
+    .containerMensagem {margin: 10px 10px;}
+
+    .CorpoMeio {padding: 20px;}
+
+    .Sub-menuF {
+        padding-left: 0;
     }
-    .containerMensagem{
-        margin: 10px 10px;
-    }
-    .CorpoMeio{
-        padding: 20px ; 
-    }
-    .sub-menu{
-        padding-left: 20px;
-    }
-}
+    header {padding: 10px;}
+    .fcontainer{padding: 30px 10px}
+    .button{margin: 0;}
+}   
