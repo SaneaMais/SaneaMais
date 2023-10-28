@@ -238,8 +238,7 @@
   }
 
   #Termos {
-    width: 95%;
-    margin-top: 10px;
+  display: none;
   }
 }
 
@@ -286,25 +285,34 @@
       margin-top: 10px;
       /* Adicione uma margem superior positiva para criar espaço entre os ícones e a logo. */
     }
-
-    footer .footer-content .footer-link-boxes .footer-box {
-      width: calc(100% / 2 - 10px);
-      height: 100%;
-      margin-right: 10px;
-    }
-
-    footer .footer-content .footer-link-boxes .footer-input-box {
+    .footer-link-boxes {
+      display: grid;
       width: 100%;
+     /* Defina o número de colunas desejado */
     }
+    .footer-box:nth-child(3) { 
+     grid-column: span 2; 
+    }
+    .input-box button{
+       width: 150%;
+    }
+    .footer-box li{
+      width: 300%;
+    }
+    
+    
   }
 
   @media(max-width: 430px) {
     .footer-link-name {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .footer-content {
       padding: 40px 25px;
+    }
+    .footer-box{
+      margin-top: 10px;
     }
 
   }
