@@ -82,9 +82,9 @@ body {
   }
 }
 
-section
-/* footer  */{
-  padding: 30px 0;
+section{
+  padding: 40px 0;
+  margin-top: 30px;
 }
 
 /* todo: font sobre */
@@ -99,6 +99,7 @@ section
 .faca-mais .container {
   display: flex;
   align-items: center;
+  
 }
 
 .faca-mais .faca-mais-text {

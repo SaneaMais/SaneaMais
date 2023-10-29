@@ -77,14 +77,14 @@ nav ul a:hover::after {
 nav .menu-icon {
     cursor: pointer;
     font-size: 25px;
-    color: var(--blue);
+    color: #140B5C ;
     display: none;
 }
 
 nav .close-icon {
     display: none;
     font-size: 30px;
-    color: var(--blue);
+    color: #140B5C ;
 }
 
 
@@ -129,7 +129,7 @@ nav .close-icon {
         position: fixed;
         top: 0;
         left: 0;
-        background: #184b88;
+        background: #140B5C ;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -237,7 +237,7 @@ nav .close-icon {
         left: 0;
         width: 108vw;
         height: 108vh;
-        background: #184b88;
+        background: #140B5C ;
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
         flex-direction: column;

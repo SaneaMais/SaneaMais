@@ -20,7 +20,7 @@
 .font-FaleConosco > h1 {
     text-align: center;
     font-size: 2.7rem;
-    color: #84bc26;
+    color: #fff;
     margin: 0 10px;
 
 }
@@ -40,7 +40,7 @@
 
 
 .fcontainer {
-    background-color: #0c48a8;
+    background-color: #140b5c;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -116,14 +116,14 @@
 
 .sub-font h1 {
     color: #0c48a8;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bolder;
 }
 
 .sub-font > p {
     width: 100%;
     color: #0c48a8;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 10px;
 }
 
@@ -135,37 +135,29 @@
 
     .font {max-width: 100%;padding: 20px;}
 
-    .Sub-menuF  {
-        padding: 10px 10px;
-      
-    }
-    .sub-font p {
-        font-size: 2.5rem;
-        width: 100%;
-    }
+    .Sub-menuF  {padding: 10px 10px;}
+
+    .sub-font p {font-size: 2.3rem;width: 100%;text-align: center;}
+    
+    .sub-font h1{text-align: center;}
 }
 @media(max-width:500px){
 
-    .sub-font h1{
-        text-align: center;
-        font-size: 3.2rem;
-        margin: 10px 0;
-    }
-    .sub-font p {
-        text-align: center;
-        font-size: 2rem;
-        width: 100%;
-    }
+    .sub-font h1{font-size: 3.2rem;margin: 10px 0;}
+
+    .sub-font p {font-size: 2rem;width: 100%;}
+
     .font {font-size: 0.9rem;}
 
     .containerMensagem {margin: 10px 10px;}
 
-    .CorpoMeio {padding: 20px;}
+    .CorpoMeio{padding: 20px;}
 
-    .Sub-menuF {
-        padding-left: 0;
-    }
+    .Sub-menuF{padding-left: 0;}
+
     header {padding: 10px;}
+
     .fcontainer{padding: 30px 10px}
+
     .button{margin: 0;}
 }   
