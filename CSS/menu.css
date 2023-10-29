@@ -25,7 +25,7 @@
 }
 
 .btn:hover {
-    background-color: #404093;
+    background-color:  #140B5C ;
 }
 
 @keyframes animate-outline {
@@ -167,7 +167,7 @@ nav .close-icon {
         position: fixed;
         top: 0;
         left: 0;
-        background: #184b88;
+        background:  #140B5C ;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -271,7 +271,7 @@ nav .close-icon {
         left: 0;
         width: 108vw;
         height: 108vh; 
-        background: #184b88;
+        background:  #140B5C ;
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
         flex-direction: column;
