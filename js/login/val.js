@@ -1,48 +1,67 @@
-function entrar() {
-  let email = document.querySelector('#email').value.trim().toLowerCase();
-  let senha = document.querySelector('#senha').value;
-  let labelEmail = document.querySelector('#labelEmail');
-  let labelSenha = document.querySelector('#labelSenha');
-  let msgError = document.querySelector('#msgError');
-  let userValid = null;
+var password = document.getElementById("password");
+var messageSenha = document.getElementById("messageSenha");
+var entrar = document.getElementById("entrar");
+var inputEmail = document.getElementById("inputEmail");
+var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+var messageEmail = document.getElementById("messageEmail");
 
-  
-  let listaUserJSON = localStorage.getItem('listaUser');
-  let listaUser = listaUserJSON ? JSON.parse(listaUserJSON) : [];
+messageEmail.style.marginLeft = "12px"; 
+messageSenha.style.marginLeft = "12px"; 
 
-  if (email === '' || senha === '') {
-    msgError.style.color = 'red';
-    msgError.style.display = 'block';
-    msgError.textContent = 'Preencha todos os campos';
-    return;
-  }
+function emailValido() {
+    var email = inputEmail.value;
 
-  listaUser.forEach((item) => {
-    if (email === item.userCad && senha === item.senhaCad) {
-      console.log('Email armazenado: ' + item.userCad);
-      console.log('Senha armazenada: ' + item.senhaCad);
+    if (emailRegex.test(email)) {
 
-      userValid = {
-        email: item.userCad,
-        senha: item.senhaCad
-      };
+        messageEmail.textContent = "";
+        messageEmail.style.color = "";
+        messageEmail.style.fontSize = "";  
+        inputEmail.style.border = ""; 
+        return "valido"
+
+    } else {
+
+        messageEmail.textContent = "E-mail inválido";
+        messageEmail.style.color = "red";
+        messageEmail.style.fontSize = "12px";
+        inputEmail.style.border = "1px solid red";
+        return "invalido"
     }
-  });
+}
 
-  if (userValid !== null) {
-    setTimeout(() => {
-      window.location.href = "../NOVOPERFIL/index.html";
-    }, 2000);
-    
-    
-  } else {
-    labelEmail.style.color = 'red';
-    labelSenha.style.color = 'red';
-    msgError.style.color = 'red';
-    msgError.style.display = 'block';
-    msgError.textContent = 'Usuário ou senha incorretos';
+entrar.addEventListener("click", function senhaValida() {
 
-    document.querySelector('#senha').value = '';
-    document.querySelector('#email').focus();
-  }
+    if (password.value.length < 8) {
+
+        messageSenha.textContent = "Senha inválida";
+        messageSenha.style.color = "red";
+        messageSenha.style.fontSize = "12px";
+        password.style.border = "1px solid red";
+
+    }else{
+        messageSenha.textContent = "";
+        messageSenha.style.color = "";
+        messageSenha.style.fontSize = "";
+        password.style.border = "";
+
+    }
+
+if(emailValido() === "invalido"){
+    messageEmail.textContent = "E-mail inválido";
+    messageEmail.style.color = "red";
+    messageEmail.style.fontSize = "12px";
+    inputEmail.style.border = "1px solid red";
+}
+
+});
+
+function senhaValidada(){
+
+    if(password.value.length >= 8){
+
+    messageSenha.textContent = "";
+    messageSenha.style.color = "";
+    messageSenha.style.fontSize = "";
+    password.style.border = "";
+    }
 }

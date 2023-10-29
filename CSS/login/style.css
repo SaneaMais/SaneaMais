@@ -27,8 +27,7 @@ input[type="password"] {
   margin-top: 2%;
   padding-left: 10px;
 }
-
-button {
+#Entrar{
   width: 100%;
   background-color: var(--blue);
   color: var(--white);
@@ -41,7 +40,7 @@ button {
   margin-top: 5%;
 }
 
-button:hover {
+#Entrar:hover {
   background-color: var(--green);
 }
 
