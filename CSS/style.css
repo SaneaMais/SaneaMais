@@ -413,7 +413,7 @@ section
 
 .sobre .sobre-text {
   width: 50%;
-  padding: 10px;
+  padding-right: 25px;
 
 }
 
@@ -441,7 +441,7 @@ text-align: justify;
   width: 100%;
   border-radius: 10px;
 }
-@media(max-width:400px){.depoimentos h3{font-size: 3rem ;}}
+@media(max-width:400px){.depoimentos h3{font-size: 3rem ;} .sobre .sobre-text{ padding: 10px; }}
 @media (max-width:500px) {
   .banner .banner-text h1 {
     font-size: 50px;
