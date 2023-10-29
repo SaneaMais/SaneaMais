@@ -1,4 +1,57 @@
-.container {
+.gradient-background {
+  
+    background: linear-gradient(55deg,#323480,#140b5c,#90bf2a);
+    background-size: 180% 180%;
+    animation: gradient-animation 15s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  
+  }
+  
+  .content h1 {
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 15px;
+  }
+  
+  .content h1 span {
+    color: #111;
+  }
+  .page-content{
+    margin-top: 30px;
+  }
+  
+  .content a {
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  
+  .content a:hover {
+    background: #034e88;
+    color: #fff;
+  }
+  .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 5%;
