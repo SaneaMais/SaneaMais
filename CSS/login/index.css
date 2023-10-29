@@ -35,9 +35,9 @@ main {
 }
 
 h3,
-p {
+.sub-titulo p {
   text-align: center;
-  margin: 1%;
+  margin: 10px;
 }
 
 form {

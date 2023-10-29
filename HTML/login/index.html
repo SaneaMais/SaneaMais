@@ -18,27 +18,20 @@
           <h3 class="titulo">Olá Seja Bem Vindo!</h3>
           <p class="sub-titulo">Estamos muito animados em ter você aqui!</p>
           <div id="msgError"></div>
-
-
-          <div class="form-input">
+          <div>
             <label id="labelEmail" for="email">E-mail ou número de telefone <span>*</span> </label>
-            <input type="text" placeholder="Digite seu email ou telefone" id="email inputEmail" class="inputs"
-              autocomplete="off" oninput="emailValido()" required>
+            <input type="email" placeholder="Digite seu email ou telefone" class="inputs" autocomplete="off" oninput="emailValido()" id="inputEmail" required>
             <p id="messageEmail"></p>
           </div>
-
-          
           <div class="form-input">
             <div class="input__wrapper">
               <label id="labelSenha" for="senha">Senha<span>*</span> </label>
-              <input type="password" placeholder="Senha" id="senha password" class="input__field" maxlength="30"
+              <input type="password" placeholder="Senha" id="password" class="input__field" maxlength="30"
                 oninput="senhaValidada()" pattern=".{8,}" required>
               <p id="messageSenha"></p>
               <img alt="Eye Icon" title="Eye Icon" src="../../img/Login/eye-off.svg" class="input__icon">
-              <small id="textPassword"></small>
             </div>
           </div>
-
 
           <div class="forget-password-link">
             <a href="#">Esqueceu sua senha?</a>

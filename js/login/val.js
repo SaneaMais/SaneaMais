@@ -1,12 +1,12 @@
-var password = document.getElementById("password");
+/* var password = document.getElementById("password");
 var messageSenha = document.getElementById("messageSenha");
 var entrar = document.getElementById("entrar");
 var inputEmail = document.getElementById("inputEmail");
 var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
 var messageEmail = document.getElementById("messageEmail");
 
-messageEmail.style.marginLeft = "12px"; 
-messageSenha.style.marginLeft = "12px"; 
+messageEmail.style.marginLeft = "5px"; 
+messageSenha.style.marginLeft = "5px"; 
 
 function emailValido() {
     var email = inputEmail.value;
@@ -21,7 +21,7 @@ function emailValido() {
 
     } else {
 
-        messageEmail.textContent = "E-mail inválido";
+        messageEmail.textContent = "E-mail ou telefone inválido";
         messageEmail.style.color = "red";
         messageEmail.style.fontSize = "12px";
         inputEmail.style.border = "1px solid red";
@@ -64,4 +64,4 @@ function senhaValidada(){
     messageSenha.style.fontSize = "";
     password.style.border = "";
     }
-}
+} */
