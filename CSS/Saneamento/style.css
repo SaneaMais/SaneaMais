@@ -1,9 +1,12 @@
+footer{
+  margin-top: 10px;
+}
 /* Metade do código está aqui  */
 
 .text-banner{
   color: #fff;
   margin: 150px;
-  font-size: 3.7rem;
+  font-size: 3.6rem;
 }
 .servicos h3 {
   text-align: center;
@@ -78,7 +81,7 @@
 
 /* Criando 3 tamanho de tela para ajustamentos futuros  */
 
-@media (max-width:580px) {.text-banner{font-size: 3rem;}}
-@media (max-width:470px) {.text-banner{font-size: 2.3rem;}}
-@media (max-width:340px) {.text-banner{font-size: 2rem;} .area{ padding: 10px;} .font-sanea{ font-size:2rem }}
+@media (max-width:580px) {.text-banner{font-size: 2.8rem;}}
+@media (max-width:470px) {.text-banner{font-size: 2.1rem;}}
+@media (max-width:340px) {.text-banner{font-size: 1.9rem;} .area{ padding: 10px;} .font-sanea{ font-size:2rem } }
 

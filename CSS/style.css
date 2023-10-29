@@ -413,12 +413,14 @@ section
 
 .sobre .sobre-text {
   width: 50%;
-  padding-right: 40px;
+  padding: 10px;
+
 }
 
 .sobre .sobre-text p {
   margin: 18px 0;
   color: #000000a6;
+text-align: justify;
 }
 
 .sobre .sobre-text h3 {
