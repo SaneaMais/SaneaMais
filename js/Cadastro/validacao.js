@@ -35,12 +35,6 @@ function mascaraTelefone(input) {
   });
 }
 
-/* Máscaras */
-// Códigos das máscaras (não foram alterados)
-/* Máscaras */
-// Códigos das máscaras (não foram alterados)
-
-/* Validação */
 var password = document.getElementById("password");
 var messageSenha = document.getElementById("textPassword");
 var entrar = document.querySelector("button");
@@ -155,7 +149,6 @@ entrar.addEventListener("click", function (event) {
   }
 });
 
-// Adicionar event listeners de input para campos relevantes
 inputEmail.addEventListener("input", function () {
   if (emailRegex.test(inputEmail.value)) {
     messageEmail.textContent = "";
