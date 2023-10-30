@@ -43,7 +43,7 @@ footer{
 }
 
 .servicos .row-card-item {
-  background-color: #c9ff9a;
+  background-color: #90bf2a;
   width: 350px;
   padding: 20px;
   border-radius: 14px;
@@ -52,7 +52,7 @@ footer{
 }
 
 .servicos .row-card-item:hover {
-  background-color: #84bc26;
+  background-color: #6a8c1f;
 }
 
 .servicos .row-card-item:hover p {
@@ -82,9 +82,6 @@ footer{
   text-align: center;
 }
 
-.dados {
-  background: #c9ff9a;
-}
 
 .dados .container {
   display: flex;

@@ -234,10 +234,6 @@ body {
   color: #84bc26;
 }
 
-.dados {
-  background: #c9ff9a;
-}
-
 .dados .container {
   display: flex;
   justify-content: center;
@@ -260,7 +256,7 @@ body {
 }
 
 .dados .dados-item p {
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .dados .dados-item p strong {

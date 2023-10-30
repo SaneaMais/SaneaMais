@@ -230,8 +230,7 @@ body.dark-theme {
   font-weight: 500;
 }
 
-.profile__buttons, 
-.profile__buttons-small {
+.profile__buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,9 +240,7 @@ body.dark-theme {
   column-gap: 1rem;
 }
 
-.profile__buttons-small {
-  column-gap: .25rem;
-}
+
 
 /*=============== BUTTONS ===============*/
 .button {
