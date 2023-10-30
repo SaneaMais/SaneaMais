@@ -24,7 +24,7 @@ input[type="password"] {
   box-sizing: border-box;
   border: none;
   outline: none;
-  margin-top: 2%;
+  margin: 12px 0;
   padding-left: 10px;
 }
 #Entrar{
@@ -85,6 +85,8 @@ input[type="password"] {
 
 .sub-titulo {
   font-size: 1.2rem;
+  margin: 10px 0;
+  padding: 5px;
 }
 
 /* ! icon da redes sociais*/

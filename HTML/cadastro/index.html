@@ -10,13 +10,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../CSS/Cadastro/style.css">
     <link rel="stylesheet" href="../../CSS/Cadastro/index.css">
-    
+
     <title>Tela de login com html e css</title>
 </head>
 
 <body>
     <main>
-
         <div class="box-form">
             <form action="../../HTML/Publicacao/NovoPerfil/index.html" id="form">
                 <div class="form-content">
@@ -24,11 +23,11 @@
                     <p class="sub-titulo">Estamos muito animados em ter você aqui!</p>
                     <div class="figura-logo">
                         <div class="logo-container">
-                          <a href="../../index.html">
-                            <img src="../../img/LOGO2.png">
-                          </a>
+                            <a href="../../index.html">
+                                <img src="../../img/LOGO2.png">
+                            </a>
                         </div>
-                      </div>
+                    </div>
                     <p class="register-link">
                         Já tem uma conta?
                         <a href="../../HTML/login/index.html">Entre</a>
@@ -41,7 +40,7 @@
 
                     <div class="form-input">
                         <label id="labelNumero" for="numero">Número de telefone <span>*</span> </label>
-                        <input type="text" placeholder="Número de telefone" id="numero" required>
+                        <input type="text" placeholder="Número de telefone" id="numero" maxlength="" required>
                         <small id="textNumero"></small>
                     </div>
 
@@ -79,9 +78,9 @@
                 <div id='msgError'></div>
                 <div id='msgSuccess'></div>
                 <small id="textForm"></small>
-                    <div class="alternative1">
-                        <span>ou</span>
-                    </div>
+                <div class="alternative1">
+                    <span>ou</span>
+                </div>
                 <div class="media">
                     <a href="#" class="icon">
                         <img src="../../img/Login/icons8-google-logo.svg">
@@ -98,13 +97,10 @@
         </div>
     </main>
     <footer></footer>
-    <script src="../../js/Cadastro/validacao.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
-    <script>$('#numero').mask('(00) 0000-00000')</script>
-    <script>$('#data').mask('00/00/0000');</script>
-    <script>$('#cep').mask('00000-000')</script>
     <script src="../../js/Cadastro/senha.js"></script>
+    <script src="../../js/Cadastro/validacao.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+
 </body>
 
 </html>
