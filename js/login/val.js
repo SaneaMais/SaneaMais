@@ -1,67 +1,71 @@
-/* var password = document.getElementById("password");
-var messageSenha = document.getElementById("messageSenha");
-var entrar = document.getElementById("entrar");
-var inputEmail = document.getElementById("inputEmail");
-var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
-var messageEmail = document.getElementById("messageEmail");
+var password = document.getElementById("password");
+    var messageSenha = document.getElementById("messageSenha");
+    var entrar = document.getElementById("Entrar");
+    var inputEmail = document.getElementById("inputEmail");
+    var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+    var messageEmail = document.getElementById("messageEmail");
 
-messageEmail.style.marginLeft = "5px"; 
-messageSenha.style.marginLeft = "5px"; 
+    messageEmail.style.marginLeft = "12px";
+    messageSenha.style.marginLeft = "12px";
 
-function emailValido() {
-    var email = inputEmail.value;
-
-    if (emailRegex.test(email)) {
-
+    function validateInput() {
+      var inputValue = inputEmail.value;
+      if (emailRegex.test(inputValue)) {
         messageEmail.textContent = "";
         messageEmail.style.color = "";
-        messageEmail.style.fontSize = "";  
-        inputEmail.style.border = ""; 
-        return "valido"
-
-    } else {
-
-        messageEmail.textContent = "E-mail ou telefone inválido";
+        messageEmail.style.fontSize = "";
+        inputEmail.style.border = "";
+        return "email";
+      } else if (/^\d{10,}$/i.test(inputValue)) {
+        messageEmail.textContent = "";
+        messageEmail.style.color = "";
+        messageEmail.style.fontSize = "";
+        inputEmail.style.border = "";
+        return "telefone";
+      } else {
+        messageEmail.textContent = "Formato inválido (E-mail ou número de telefone)";
         messageEmail.style.color = "red";
         messageEmail.style.fontSize = "12px";
         inputEmail.style.border = "1px solid red";
-        return "invalido"
+        return "invalido";
+      }
     }
-}
 
-entrar.addEventListener("click", function senhaValida() {
-
-    if (password.value.length < 8) {
-
+    function senhaValida() {
+      if (password.value.length < 8) {
         messageSenha.textContent = "Senha inválida";
         messageSenha.style.color = "red";
         messageSenha.style.fontSize = "12px";
         password.style.border = "1px solid red";
-
-    }else{
+      } else {
         messageSenha.textContent = "";
         messageSenha.style.color = "";
         messageSenha.style.fontSize = "";
         password.style.border = "";
-
+      }
     }
 
-if(emailValido() === "invalido"){
-    messageEmail.textContent = "E-mail inválido";
-    messageEmail.style.color = "red";
-    messageEmail.style.fontSize = "12px";
-    inputEmail.style.border = "1px solid red";
-}
+    entrar.addEventListener("click", function () {
+      var inputType = validateInput();
+      senhaValida();
+      if (inputType === "invalido") {
+        messageEmail.textContent = "inválido (E-mail ou número de telefone)";
+        messageEmail.style.color = "red";
+        messageEmail.style.fontSize = "12px";
+        inputEmail.style.border = "1px solid red";
+      }
+    });
 
-});
+    inputEmail.addEventListener("input", function () {
+      if (validateInput() !== "invalido") {
+        inputEmail.style.border = "";
+        messageEmail.textContent = "";
+      }
+    });
 
-function senhaValidada(){
-
-    if(password.value.length >= 8){
-
-    messageSenha.textContent = "";
-    messageSenha.style.color = "";
-    messageSenha.style.fontSize = "";
-    password.style.border = "";
-    }
-} */
+    password.addEventListener("input", function () {
+      if (password.value.length >= 8) {
+        password.style.border = "";
+        messageSenha.textContent = "";
+      }
+    });

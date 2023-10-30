@@ -142,9 +142,8 @@ main .alternative1 span::after {
 
 .input__icon {
   position: absolute;
-  right: 12px;
-  top: 70%;
-  transform: translateY(-50%);
+  right: 10px;
+  top: 37px;
 }
 
 .form-input img {

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const telefoneInput = document.getElementById("telefone");
 
     telefoneInput.addEventListener("input", function (e) {
-        let value = e.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+        let value = e.target.value.replace(/\D/g, ''); 
         let formattedValue = '';
 
         if (value.length > 0) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     telefoneInput.addEventListener("keydown", function (e) {
         if (e.key === "Backspace" && telefoneInput.selectionStart === telefoneInput.selectionEnd) {
-            // Permite excluir o hífen
+            
             if (telefoneInput.selectionStart === 6) {
                 telefoneInput.selectionStart = 5;
             }
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
-const pageContent = document.querySelector(".page-content"); // Adicione uma classe "page-content" para o conteúdo que você deseja ocultar.
+const pageContent = document.querySelector(".page-content"); ocultar.
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
-  pageContent.classList.toggle("hidden"); // Toggle a classe "hidden" para ocultar ou mostrar o conteúdo da página.
+  pageContent.classList.toggle("hidden"); 
 });
