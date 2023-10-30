@@ -16,14 +16,8 @@ var password = document.getElementById("password");
         messageEmail.style.fontSize = "";
         inputEmail.style.border = "";
         return "email";
-      } else if (/^\d{10,}$/i.test(inputValue)) {
-        messageEmail.textContent = "";
-        messageEmail.style.color = "";
-        messageEmail.style.fontSize = "";
-        inputEmail.style.border = "";
-        return "telefone";
-      } else {
-        messageEmail.textContent = "Formato inválido (E-mail ou número de telefone)";
+      }  else {
+        messageEmail.textContent = "Formato inválido ( digite seu E-mail )";
         messageEmail.style.color = "red";
         messageEmail.style.fontSize = "12px";
         inputEmail.style.border = "1px solid red";
