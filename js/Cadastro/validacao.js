@@ -1,190 +1,128 @@
-/* Máscaras */
-function mascaraData(input) {
-  input.addEventListener("input", function () {
-    if (/\D/.test(input.value)) input.value = input.value.replace(/\D/g, "");
-    var v = input.value.replace(/\D/g, "").slice(0, 8);
-    if (v.length >= 2) {
-      v = v.replace(/(\d{2})(\d)/, "$1/$2");
-    }
-    if (v.length >= 5) {
-      v = v.replace(/(\d{2})(\d{2})(\d{0,4})/, "$1/$2$3");
-    }
-    input.value = v;
-  });
-}
 
-function mascaraCEP(input) {
-  input.addEventListener("input", function () {
-    if (/\D/.test(input.value)) input.value = input.value.replace(/\D/g, "");
-    var v = input.value.replace(/\D/g, "").slice(0, 8);
-    if (v.length >= 5) {
-      v = v.replace(/(\d{5})(\d{0,3})/, "$1-$2");
-    }
-    input.value = v;
-  });
-}
-function mascaraTelefone(input) {
+var dataInput = document.getElementById("data");
+aplicarMascara(dataInput, "data");
+
+var cepInput = document.getElementById("cep");
+aplicarMascara(cepInput, "cep");
+
+var numeroInput = document.getElementById("numero");
+aplicarMascara(numeroInput, "telefone");
+
+function aplicarMascara(input, tipo) {
   input.addEventListener("input", function () {
     var v = input.value.replace(/\D/g, "");
-    if (v.length <= 10) {
-      v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
-    } else {
-      v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+
+    if (tipo === "data") {
+      if (v.length <= 8) {
+        v = v.replace(/(\d{2})(\d{2})(\d{0,4})/, "$1/$2/$3");
+      }
+    } else if (tipo === "cep") {
+      if (v.length >= 5) {
+        v = v.replace(/(\d{5})(\d{0,3})/, "$1-$2");
+      }
+    } else if (tipo === "telefone") {
+      if (v.length <= 10) {
+        v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+      } else {
+        v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+      }
     }
+
     input.value = v.slice(0, 15);
   });
 }
 
-var password = document.getElementById("password");
-var messageSenha = document.getElementById("textPassword");
-var entrar = document.querySelector("button");
-var inputEmail = document.getElementById("email");
-var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
-var messageEmail = document.getElementById("textEmail");
-var numero = document.getElementById("numero");
-var messageNumero = document.getElementById("textNumero");
-var nome = document.getElementById("nome");
-var messageNome = document.getElementById("textNome");
-var data = document.getElementById("data");
-var messageData = document.getElementById("textData");
-var cep = document.getElementById("cep");
-var messageCep = document.getElementById("textCep");
+var emailInput = document.getElementById("email");
+var numeroInput = document.getElementById("numero");
+var nomeInput = document.getElementById("nome");
+var dataInput = document.getElementById("data");
+var cepInput = document.getElementById("cep");
+var passwordInput = document.getElementById("password");
+var entrarButton = document.getElementById("Entrar");
 
-mascaraData(data);
-mascaraCEP(cep);
-mascaraTelefone(numero);
+emailInput.addEventListener("blur", function () {
+  validateInput(emailInput, "Email inválido");
+  checkFormValidity();
+});
 
-function validateInput() {
-  var inputValue = inputEmail.value;
-  var numeroValue = numero.value;
-  var nomeValue = nome.value;
-  var dataValue = data.value;
-  var cepValue = cep.value;
+numeroInput.addEventListener("blur", function () {
+  validateInput(numeroInput, "Número de telefone inválido");
+  checkFormValidity();
+});
 
-  var valid = true;
+nomeInput.addEventListener("blur", function () {
+  validateInput(nomeInput, "Nome inválido");
+  checkFormValidity();
+});
 
-  if (inputEmail.value === "") {
-    messageEmail.textContent = "Campo obrigatório";
-    messageEmail.style.color = "red";
-    inputEmail.style.border = "1px solid red";
-    valid = false;
-  } else if (emailRegex.test(inputValue)) {
-    messageEmail.textContent = "";
-    messageEmail.style.color = "";
-    inputEmail.style.border = "";
+dataInput.addEventListener("blur", function () {
+  aplicarMascara(dataInput, "data");
+  validateInput(dataInput, "Data de nascimento inválida");
+  checkFormValidity();
+});
+
+cepInput.addEventListener("blur", function () {
+  aplicarMascara(cepInput, "cep");
+  validateInput(cepInput, "CEP inválido");
+  checkFormValidity();
+});
+
+passwordInput.addEventListener("blur", function () {
+  senhaValida(passwordInput);
+  checkFormValidity();
+});
+
+entrarButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  validateInput(emailInput, "Email inválido");
+  validateInput(numeroInput, "Número de telefone inválido");
+  validateInput(nomeInput, "Nome inválido");
+  aplicarMascara(dataInput, "data");
+  validateInput(dataInput, "Data de nascimento inválida");
+  aplicarMascara(cepInput, "cep");
+  validateInput(cepInput, "CEP inválido");
+  senhaValida(passwordInput);
+  checkFormValidity();
+});
+
+function checkFormValidity() {
+  var isEmailValid = validateInput(emailInput, "Email inválido");
+  var isNumeroValid = validateInput(numeroInput, "Número de telefone inválido");
+  var isNomeValid = validateInput(nomeInput, "Nome inválido");
+  var isDataValid = validateInput(dataInput, "Data de nascimento inválida");
+  var isCepValid = validateInput(cepInput, "CEP inválido");
+  var isSenhaValid = senhaValida(passwordInput);
+
+  if (isEmailValid === "valido" && isNumeroValid === "valido" && isNomeValid === "valido" && isDataValid === "valido" && isCepValid === "valido" && isSenhaValid === "valido") {
+    // Todos os campos estão preenchidos corretamente, redirecione para a página de sucesso.
+    window.location.href = "../../HTML/Publicacao/NovoPerfil/index.html";
   }
-
-  if (numero.value === "") {
-    messageNumero.textContent = "Campo obrigatório";
-    messageNumero.style.color = "red";
-    numero.style.border = "1px solid red";
-    valid = false;
-  } else if (/^\d{12}$/.test(numeroValue)) {
-    messageNumero.textContent = "";
-    messageNumero.style.color = "";
-    numero.style.border = "";
-  }
-
-  if (nome.value === "") {
-    messageNome.textContent = "Campo obrigatório";
-    messageNome.style.color = "red";
-    nome.style.border = "1px solid red";
-    valid = false;
-  } else if (nomeValue.trim().length >= 3) {
-    messageNome.textContent = "";
-    messageNome.style.color = "";
-    nome.style.border = "";
-  }
-
-  if (data.value === "") {
-    messageData.textContent = "Campo obrigatório";
-    messageData.style.color = "red";
-    data.style.border = "1px solid red";
-    valid = false;
-  } else if (/^\d{8}$/.test(dataValue)) {
-    messageData.textContent = "";
-    messageData.style.color = "";
-    data.style.border = "";
-  }
-
-  if (cep.value === "") {
-    messageCep.textContent = "Campo obrigatório";
-    messageCep.style.color = "red";
-    cep.style.border = "1px solid red";
-    valid = false;
-  } else if (/^\d{8}$/.test(cepValue)) {
-    messageCep.textContent = "";
-    messageCep.style.color = "";
-    cep.style.border = "";
-  }
-
-  return valid;
 }
 
-function senhaValida() {
-  if (password.value.length >= 8) {
-    messageSenha.textContent = "";
-    messageSenha.style.color = "";
-    password.style.border = "";
-    return true;
+function validateInput(input, errorMessage) {
+  var inputValue = input.value.trim();
+  if (inputValue !== "") {
+    input.style.border = "";
+    input.nextElementSibling.textContent = "";
+    return "valido";
   } else {
-    messageSenha.textContent = "Senha inválida (mínimo 8 caracteres)";
-    messageSenha.style.color = "red";
+    input.style.border = "1px solid red";
+    input.nextElementSibling.textContent = errorMessage;
+    input.nextElementSibling.style.color = "red";
+    return "invalido";
+  }
+}
+
+function senhaValida(password) {
+  var passwordValue = password.value;
+  if (passwordValue.length < 8) {
     password.style.border = "1px solid red";
-    return false;
+    password.nextElementSibling.textContent = "Senha inválida";
+    password.nextElementSibling.style.color = "red";
+    return "invalido";
+  } else {
+    password.style.border = "";
+    password.nextElementSibling.textContent = "";
+    return "valido";
   }
 }
-
-entrar.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  var inputIsValid = validateInput();
-  var senhaIsValid = senhaValida();
-
-  if (inputIsValid && senhaIsValid) {
-    document.getElementById("msgError").textContent = "";
-    alert("Formulário válido. Você pode prosseguir.");
-  } else {
-    document.getElementById("msgError").textContent = "Por favor, corrija os erros no formulário.";
-  }
-});
-
-inputEmail.addEventListener("input", function () {
-  if (emailRegex.test(inputEmail.value)) {
-    messageEmail.textContent = "";
-    messageEmail.style.color = "";
-    inputEmail.style.border = "";
-  }
-});
-
-numero.addEventListener("input", function () {
-  if (/^\d{12}$/.test(numero.value)) {
-    messageNumero.textContent = "";
-    messageNumero.style.color = "";
-    numero.style.border = "";
-  }
-});
-
-nome.addEventListener("input", function () {
-  if (nome.value.trim().length >= 3) {
-    messageNome.textContent = "";
-    messageNome.style.color = "";
-    nome.style.border = "";
-  }
-});
-
-data.addEventListener("input", function () {
-  if (/^\d{8}$/.test(data.value)) {
-    messageData.textContent = "";
-    messageData.style.color = "";
-    data.style.border = "";
-  }
-});
-
-cep.addEventListener("input", function () {
-  if (/^\d{8}$/.test(cep.value)) {
-    messageCep.textContent = "";
-    messageCep.style.color = "";
-    cep.style.border = "";
-  }
-});

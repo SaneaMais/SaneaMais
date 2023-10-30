@@ -40,7 +40,7 @@
 
                     <div class="form-input">
                         <label id="labelNumero" for="numero">Número de telefone <span>*</span> </label>
-                        <input type="text" placeholder="Número de telefone" id="numero" maxlength="" required>
+                        <input type="text" placeholder="Número de telefone" id="numero" maxlength="15" required>
                         <small id="textNumero"></small>
                     </div>
 
@@ -52,13 +52,13 @@
 
                     <div class="form-input">
                         <label id="labelData" for="data">Data de nascimento <span>*</span> </label>
-                        <input type="text" placeholder="__/__/____" id="data" required>
+                        <input type="text" placeholder="__/__/____" id="data" maxlength="10" required>
                         <small id="textData"></small>
                     </div>
 
                     <div class="form-input">
                         <label id="labelCep" for="cep">Cep <span>*</span> </label>
-                        <input type="text" placeholder="Cep" id="cep" required>
+                        <input type="text" placeholder="Cep" id="cep" maxlength="9" required>
                         <small id="textCep"></small>
                     </div>
                     <div class="form-input">
@@ -74,7 +74,9 @@
                 <div class="forget-password-link">
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
-                <button onclick="cadastrar()">Cadastrar</button>
+
+                <input type="submit" value="Entrar" id="Entrar">
+
                 <div id='msgError'></div>
                 <div id='msgSuccess'></div>
                 <small id="textForm"></small>
