@@ -185,5 +185,5 @@ main .alternative1 span::after {
   }
 
 }
-@media(max-width:420px){.logo{top: 30px;}}
+@media(max-width:420px){.logo{top: 30px;}.titulo{padding: 15px 0 0;}}
 @media(max-width:320px){.logo{top: 20px;}}
