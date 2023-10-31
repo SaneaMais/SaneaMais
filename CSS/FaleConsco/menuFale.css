@@ -1,8 +1,4 @@
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
-}
+
 
 
 .btn {
@@ -44,7 +40,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding: 30px 105px 0 ;
 }
 
 nav ul {
@@ -123,7 +119,15 @@ nav .close-icon {
 }
 
 
-@media(max-width: 895px) {
+@media(max-width: 1000px) {
+    .Section_top{
+    margin: 0 auto;
+    padding: 0 5%;
+
+    }
+    nav{
+        padding: 30px 10px 0;
+    }
 
     .ul {
         position: fixed;
