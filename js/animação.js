@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const cardPosition = meuCard.getBoundingClientRect().top;
             const startPosition = window.pageYOffset;
-            const duration = 1000; // Duração da animação em milissegundos
+            const duration = 1000; 
             let startTime = null;
 
             function animation(currentTime) {
