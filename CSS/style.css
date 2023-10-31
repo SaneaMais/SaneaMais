@@ -15,7 +15,11 @@ body {
  section{
   padding: 30px 0;
 }
- 
+
+ /* todo */
+
+
+
 /* todo: font sobre */
 
 .font-sobre{
@@ -60,6 +64,11 @@ body {
 .faca-mais .faca-mais-img img {
   width: 100%;
 }
+
+.depoimentos{
+  scroll-behavior: smooth;
+}
+
 
 .depoimentos h3 {
   margin-top: 20px;
