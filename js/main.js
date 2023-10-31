@@ -7,13 +7,3 @@ hamburger.addEventListener("click", () => {
   pageContent.classList.toggle("hidden"); 
 });
 
-document.querySelector('footer a[href="#meu-card"]').addEventListener('click', function(e) {
-  e.preventDefault();
-  
-  const cardElement = document.getElementById('meu-card');
-  
-  if (cardElement) {
-    cardElement.scrollIntoView({ behavior: 'smooth' });
-  }
-});
-

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
-const pageContent = document.querySelector(".page-content"); ocultar.
+const pageContent = document.querySelector(".page-content"); 
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
