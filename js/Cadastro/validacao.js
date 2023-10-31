@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   passwordInput.addEventListener("blur", function () {
     validatePassword(passwordInput);
-  });
+});
+
 
   function validateEmail(input) {
     const email = input.value;
@@ -79,12 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validatePhoneNumber(input) {
     const phoneNumber = input.value.replace(/\D/g, "");
-    if (phoneNumber.length === 12) {
+    if (phoneNumber.length === 11) { // 11 dígitos no número de telefone, excluindo a máscara
       clearValidation(input);
     } else {
       setValidation(input, "Número de telefone inválido");
     }
   }
+  
 
   function validateUsername(input) {
     const username = input.value;
@@ -112,16 +114,17 @@ document.addEventListener("DOMContentLoaded", function () {
       setValidation(input, "CEP inválido");
     }
   }
-
   function validatePassword(input) {
     const password = input.value;
-    if (password.length >= 8) {
-      clearValidation(input);
+    if (password.length === 0) {
+        setValidation(input, "Campo obrigatório");
+    } else if (password.length < 8) {
+        setValidation(input, "A senha deve ter pelo menos 8 caracteres");
     } else {
-      setValidation(input, "A senha deve ter pelo menos 8 caracteres");
+        clearValidation(input);
     }
-  }
-  
+}
+
 
   function clearValidation(input) {
     input.style.border = "";
@@ -148,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (isValid) {
-      form.submit(); // Envie o formulário se for válido
+      form.submit(); 
     }
   }
 });
