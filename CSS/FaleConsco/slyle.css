@@ -14,13 +14,13 @@
     text-align: center;
     margin: 10px 0;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .font-FaleConosco > h1 {
     text-align: center;
     font-size: 2.2rem;
-    color: #fff;
+    color: var(--white);
     margin: 33px 0 0;
 
 }
@@ -115,14 +115,14 @@
 }
 
 .sub-font h1 {
-    color: #0c48a8;
+    color: var(--blue-3);
     font-size: 3rem;
     font-weight: bolder;
 }
 
 .sub-font > p {
     width: 100%;
-    color: #0c48a8;
+    color: var(--blue-3);
     font-size: 3rem;
     margin-top: 10px;
 }

@@ -13,33 +13,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const cepInput = document.getElementById("cep");
   const passwordInput = document.getElementById("password");
 
-  // Função para aplicar máscara de e-mail
+ 
   emailInput.addEventListener("input", function () {
     emailInput.value = emailInput.value.toLowerCase();
   });
 
-  // Função para aplicar máscara de número de telefone
   numeroInput.addEventListener("input", function () {
     numeroInput.value = numeroInput.value
       .replace(/\D/g, '')
       .replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3');
   });
 
-  // Função para aplicar máscara de data
+ 
   dataInput.addEventListener("input", function () {
     dataInput.value = dataInput.value
       .replace(/\D/g, '')
       .replace(/(\d{2})(\d{2})(\d{4})/, '$1/$2/$3');
   });
 
-  // Função para aplicar máscara de CEP
+ 
   cepInput.addEventListener("input", function () {
     cepInput.value = cepInput.value
       .replace(/\D/g, '')
       .replace(/(\d{5})(\d{3})/, '$1-$2');
   });
 
-  // Função para aplicar máscara de nome (permitindo apenas letras e números)
   nomeInput.addEventListener("input", function () {
     nomeInput.value = nomeInput.value.replace(/[^a-zA-Z0-9]/g, '');
   });
@@ -80,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validatePhoneNumber(input) {
     const phoneNumber = input.value.replace(/\D/g, "");
-    if (phoneNumber.length === 11) { // 11 dígitos no número de telefone, excluindo a máscara
+    if (phoneNumber.length === 11) { 
       clearValidation(input);
     } else {
       setValidation(input, "Número de telefone inválido");
