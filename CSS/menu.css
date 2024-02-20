@@ -199,6 +199,7 @@ nav .close-icon {
     background: none;
     border-top: 3px solid #fff;
     cursor: pointer;
+    z-index: 9999999999999;
 }
 
 .hamburger::after,
@@ -211,6 +212,7 @@ nav .close-icon {
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
+    
 }
 
 
@@ -226,6 +228,7 @@ nav .close-icon {
         justify-content: center;
         clip-path: circle(0% at 100% 0);
         transition: 0.7s;
+        z-index: 1; 
 
     }
 
@@ -360,9 +363,10 @@ nav .close-icon {
     }
 
     .nav.active .hamburger {
-        top: 30px;
-        right: 20px;
+        top: 50px;
+        right: 40px;
         border-top-color: transparent;
+        position: fixed;
     }
 
     .nav.active .hamburger::before {
