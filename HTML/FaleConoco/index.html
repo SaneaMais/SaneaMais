@@ -19,9 +19,9 @@
 
 <body>
     <header>
-        <nav class="nav">
-            <section class="Section_top">
-                <article class="container">
+            <div class="Section_top">
+                <div class="container">
+                    <nav class="nav">
                     <a href="../../index.html">
                         <img src="../../img/LOGO1.png" alt="Logo" />
                     </a>
@@ -33,10 +33,11 @@
                         <a class="btn" href="../../HTML/cadastro/index.html">Cadastrar</a>
                     </ul>
                     <button class="hamburger"></button>
-        </nav>
-        </article>
-        </section>
+        </div>
+    </div>
+</nav>
     </header>
+
     <main>
         <section class="Sub-menuF">
             <section class="sub-font">
@@ -54,14 +55,14 @@
                     <p>Se você tiver algum problema ou alguma sugestão, envie sua mensagem aqui que retornaremos o breve
                         possível</p>
                 </article>
-                <div class="containerMensagem">
-                    <div id="inputs">
+                <section class="containerMensagem">
+                    <section id="inputs">
                         <div class="iinput-box-form">
                             <label for="name">
                                 Nome
-                                <div class="input-field">
+                                <article class="input-field">
                                     <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-                                </div>
+                                </article>
                             </label>
                         </div>
 
@@ -92,8 +93,8 @@
                             <div class="button"><button>Enviar</button></div>
 
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
             </div>
         </form>
     </main>
