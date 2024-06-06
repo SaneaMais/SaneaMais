@@ -24,14 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3');
     });
   
-   
     CnpjInput.addEventListener("input", function () {
       CnpjInput.value = CnpjInput.value
         .replace(/\D/g, '')
-        .replace(/(\d{2}).(\d{3}).(\d{3})\(\d{4})-(\d{2})/, '$1.$2.$3/$4');
+        .replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
     });
   
-   
     cepInput.addEventListener("input", function () {
       cepInput.value = cepInput.value
         .replace(/\D/g, '')
@@ -96,14 +94,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     function validateCnpj(input) {
-      const Cnpj = input.value.replace(/\D/g, "");
-      if (Cnpj.length === 14) {
+      const cnpj = input.value.replace(/\D/g, "");
+      if (cnpj.length === 14) {
         clearValidation(input);
       } else {
-        setValidation(input, "Cnpj inválido");
+        setValidation(input, "CNPJ inválido");
       }
     }
-  
+
     function validateCep(input) {
       const cep = input.value.replace(/\D/g, "");
       if (cep.length === 8) {
