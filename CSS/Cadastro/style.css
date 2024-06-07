@@ -1,24 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+
+:root {
+    --blue: #072c75;
+    --black-2: #333;
+    --white: #fff;
+    --red: red;
+    --white2: #e6d9d9e7;
+    --black: #000000;
+    --green: #45A84A;
+    --blue3: #245ced;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #323480 40%, #140b5c  100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: var(--blue);
+}
+
+form {
+    margin: 10px;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+}
+
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Formulário */
 .box-form {
     max-width: 650px;
-    background: var(--white);
     width: 100%;
-    margin: 40px;
+    margin: 40px auto;
     padding: 25px;
-    box-sizing: border-box;
     border-radius: 10px;
+    background: var(--white);
+    box-sizing: border-box;
     max-height: 1200px;
     margin-top: 80px;
-
 }
 
 .form-input {
     margin-top: 20px;
     width: 100%;
-
-}
-
-.form-content label span {
-    color: var(--red);
 }
 
 input[type="text"],
@@ -35,7 +83,7 @@ input[type="password"] {
     padding-left: 10px;
 }
 
-#Entrar{
+#Entrar {
     width: 100%;
     background-color: var(--blue3);
     color: var(--white);
@@ -45,7 +93,7 @@ input[type="password"] {
     cursor: pointer;
     transition: transform 0.2s, 0.2s;
     font-size: 1rem;
-    margin-top: 1%;
+    margin-top: 5%;
 }
 
 #Entrar:hover {
@@ -58,11 +106,6 @@ input[type="password"] {
     font-weight: 600;
     text-transform: uppercase;
     display: block;
-
-}
-
-.forget-password-link {
-    margin-top: 20px;
 }
 
 .form-content h3 {
@@ -73,21 +116,13 @@ input[type="password"] {
     font-weight: 500;
     text-align: center;
     margin-bottom: 10px;
-
 }
 
-.form-content>.sub-titulo {
+.form-content .sub-titulo {
     text-align: center;
     margin-bottom: 10px;
     font-size: 1.5em;
 }
-
-
-.input__wrapper {
-    position: relative;
-}
-
-/* ! icon ver senha  */
 
 .input__wrapper {
     position: relative;
@@ -103,18 +138,9 @@ input[type="password"] {
     top: 37px;
 }
 
-.form-input img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-
-/* ! icon das redes sociais */
-
 .alternative1 {
     text-align: center;
     padding: 10px;
-
 }
 
 .alternative1 span {
@@ -129,7 +155,7 @@ input[type="password"] {
 }
 
 .alternative1 span::before,
-main .alternative1 span::after {
+.alternative1 span::after {
     content: '';
     display: block;
     height: 1px;
@@ -154,7 +180,7 @@ main .alternative1 span::after {
 }
 
 @media (max-width: 440px) {
-    .form-content>.sub-titulo {
+    .form-content .sub-titulo {
         font-size: 1.3rem;
     }
 

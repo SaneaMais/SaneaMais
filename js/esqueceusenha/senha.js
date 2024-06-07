@@ -9,7 +9,6 @@ inputIcon.forEach((item, i) => {
         item.setAttribute(
             'src',
             input[i].getAttribute('type') === 'password' ?
-
                 '../../img/Login/eye.svg'
                 : '../../img/Login/eye-off.svg'
         );
@@ -22,4 +21,4 @@ inputIcon.forEach((item, i) => {
                 'password'
         );
     });
-})
+});

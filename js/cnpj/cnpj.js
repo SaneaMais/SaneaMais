@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nomeInput = document.getElementById("nome");
     const CnpjInput = document.getElementById("Cnpj");
     const cepInput = document.getElementById("cep");
-    const passwordInput = document.getElementById("password");
+    const passwordInput = document.getElementById("senha");
   
    
     emailInput.addEventListener("input", function () {
